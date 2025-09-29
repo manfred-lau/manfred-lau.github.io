@@ -28,7 +28,9 @@ public class WCReducer extends MapReduceBase implements Reducer<Text,
 
         //
         // take only the lines with values greater than 1
-        if (count >= 2) {
+        //if (count >= 2) {
+        // take only the lines with values greater than 100
+        if (count >= 101) {
             output.collect(key, new IntWritable(count));
         }
     }
